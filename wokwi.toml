@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build\Aula_4-10.bin'
+elf = 'build\Aula_4-10.elf'
