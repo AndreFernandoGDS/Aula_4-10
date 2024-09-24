@@ -35,7 +35,7 @@ void procTask(void *params)
         // Aguarda até que os bits `goCom` e `goSensor` sejam setados no grupo de eventos
         // `true, true` significa que os bits serão limpos após a espera
         // `portMAX_DELAY` faz com que espere indefinidamente até que ambos os bits sejam setados
-        xEventGroupWaitBits(grupoEvt, goCom | goSensor, true, true, portMAX_DELAY);
+        xEventGroupWaitBits(grupoEvt, goCom | goSensor, true, true, portMAX_DELAY); // goCom | goSensor, entrar en ordem com os bits menos significativos, para os mmais sig.
 
         // Quando ambos os bits estiverem setados, executa o código abaixo
         printf("Recebido requisição e leitura do sensor \n");
